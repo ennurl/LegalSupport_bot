@@ -13,7 +13,7 @@ def start(message):
     user_markup.row('Наши контакты')
 
     # показываем клавиатуру
-    bot.send_message(message.chat.id, 'Привет!', reply_markup=user_markup)
+    bot.send_message(message.chat.id, 'как дела ?)', reply_markup=user_markup)
 
 
 @bot.message_handler(content_types=['text'])
