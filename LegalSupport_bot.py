@@ -4,12 +4,18 @@ import telebot
 bot = telebot.TeleBot('1112694048:AAGMwkYdUVuoecKy9G_dB_eQCb6RLmxWr_U')
 users_id = [386410157, 180616110, 864009276, 381491583, 1187166018, 362438057, 218120088, 201469292, 830106768, 124422452, 515943088, 574189734]
 
+'''
+bgt = bot.get_me()
+print('================================================================================')
+print(f'Имя бота: "{bgt.first_name}". Никнейм: @{bgt.username}. ID: {bgt.id}.\n')
+'''
+
 @bot.message_handler(commands=['start'])
 def start(message):
 
     if message.chat.id not in users_id:
         users_id.append(message.chat.id)
-        print(f'Добавлен новый пользователь!\nВсего пользователей: {len(users_id)}\n')
+        # print(f'Добавлен новый пользователь!\nВсего пользователей: {len(users_id)}\n')
 
     # создаем клавиатуру
     user_markup = telebot.types.ReplyKeyboardMarkup(True)
@@ -30,7 +36,7 @@ def send_text(message):
 
     if message.chat.id not in users_id:
         users_id.append(message.chat.id)
-        print(f'Добавлен новый пользователь!\nВсего пользователей: {len(users_id)}\n')
+        # print(f'Добавлен новый пользователь!\nВсего пользователей: {len(users_id)}\n')
 
     if message.text == 'В главное меню':
 
