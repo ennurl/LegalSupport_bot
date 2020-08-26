@@ -2,11 +2,11 @@
 import telebot
 
 bot = telebot.TeleBot('1112694048:AAGMwkYdUVuoecKy9G_dB_eQCb6RLmxWr_U')
-users_id = []
+users_id = [386410157, 180616110]
 
 # описание бота
 bgt = bot.get_me()
-print('===========================================================================')
+print('================================================================================')
 print(f'Имя бота: "{bgt.first_name}". Никнейм: @{bgt.username}. ID: {bgt.id}.\n')
 
 @bot.message_handler(commands=['start'])
@@ -37,7 +37,7 @@ def send_text(message):
     if message.chat.id not in users_id:
         users_id.append(message.chat.id)
         print(f'Добавлен новый пользователь!\n'
-              f'Всего пользователей: {len(users_id)}')
+              f'Всего пользователей: {len(users_id)}\n\n')
 
     if message.text == 'В главное меню':
 
