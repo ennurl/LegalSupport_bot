@@ -2,7 +2,7 @@
 import telebot
 
 bot = telebot.TeleBot('1112694048:AAGMwkYdUVuoecKy9G_dB_eQCb6RLmxWr_U')
-users_id = [386410157, 180616110]
+users_id = [386410157, 180616110, 864009276]
 
 # описание бота
 bgt = bot.get_me()
