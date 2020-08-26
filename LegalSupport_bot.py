@@ -9,8 +9,7 @@ def start(message):
 
     if message.chat.id not in users_id:
         users_id.append(message.chat.id)
-        print(f'Добавлен новый пользователь!\n'
-              f'Всего пользователей: {len(users_id)}\n')
+        print(f'Добавлен новый пользователь!\nВсего пользователей: {len(users_id)}\n')
 
     # создаем клавиатуру
     user_markup = telebot.types.ReplyKeyboardMarkup(True)
@@ -31,8 +30,7 @@ def send_text(message):
 
     if message.chat.id not in users_id:
         users_id.append(message.chat.id)
-        print(f'Добавлен новый пользователь!\n'
-              f'Всего пользователей: {len(users_id)}\n')
+        print(f'Добавлен новый пользователь!\nВсего пользователей: {len(users_id)}\n')
 
     if message.text == 'В главное меню':
 
