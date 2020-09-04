@@ -50,6 +50,20 @@ def start(message):
             hundred.append(users_id[i+300])
         bot.send_message(message.chat.id, str(hundred))
 
+    # здесь уже если больше 600
+    if len(users_id) > 600:
+        hundred = []
+        for i in range(len(users_id) - 600):
+            hundred.append(users_id[i + 600])
+        bot.send_message(message.chat.id, str(hundred))
+
+    # здесь уже если больше 900
+    if len(users_id) > 900:
+        hundred = []
+        for i in range(len(users_id) - 900):
+            hundred.append(users_id[i + 900])
+        bot.send_message(message.chat.id, str(hundred))
+
 @bot.message_handler(content_types=['text'])
 def send_text(message):
 
