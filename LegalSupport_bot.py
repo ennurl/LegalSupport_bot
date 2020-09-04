@@ -30,7 +30,7 @@ def start(message):
 def start(message):
     bot.send_message(message.chat.id, 'Всего пользователей: ' + str(len(users_id)))
 
-@bot.message_handler(commands=['pupaid'])
+@bot.message_handler(commands=['lupa'])
 def start(message):
 
     hundred = []
