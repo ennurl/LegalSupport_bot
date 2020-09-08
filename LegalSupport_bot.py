@@ -28,7 +28,7 @@ def start(message):
 
 @bot.message_handler(commands=['pupa'])
 def start(message):
-    bot.send_message(message.chat.id, 'Всего пук пользователей: ' + str(len(users_id)))
+    bot.send_message(message.chat.id, 'Всего пользователей: ' + str(len(users_id)))
 
 @bot.message_handler(commands=['lupa'])
 def start(message):
