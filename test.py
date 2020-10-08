@@ -1,10 +1,6 @@
-386410157
+my_id = 386410157
 
-for i in range(len(new_id)):
-    if new_id[i] not in id:
-        id.append(new_id[i])
+len(users_id) = 1201
 
-print(id)
-print(len(id))
-
-386410157
+if len(users_id) % 300 == 0:
+    print('yes')
