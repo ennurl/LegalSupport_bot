@@ -19,21 +19,21 @@ def start(message):
         users_id.append(message.chat.id)
         print('Добавлен новый пользователь!\nВсего пользователей: ' + str(len(users_id)) + '\n')
 
-        #if len(users_id) % 300 == 0:
+        if len(users_id) % 300 == 0:
 
-        ###
-        block = int(len(users_id) // 300)
-        start_block = 0
+            ###
+            block = int(len(users_id) // 300)
+            start_block = 0
 
-        for i in range(block):
-            bot.send_message(386410157, str(users_id[0 + start_block:300 * (i + 1)]))
-            start_block += 300
+            for i in range(block):
+                bot.send_message(386410157, str(users_id[0 + start_block:300 * (i + 1)]))
+                start_block += 300
 
-        end_block = 300 * block
-        bot.send_message(386410157, str(users_id[end_block:len(users_id)]))
-        ###
+            end_block = 300 * block
+            bot.send_message(386410157, str(users_id[end_block:len(users_id)]))
+            ###
 
-        bot.send_message(386410157, 'Добавлен новый пользователь!\n Всего пользователей: ' + str(len(users_id)))
+        bot.send_message(386410157, 'Добавлен новый пользователь!\nВсего пользователей: ' + str(len(users_id)))
 
     # создаем клавиатуру
     user_markup = telebot.types.ReplyKeyboardMarkup(True)
@@ -84,7 +84,7 @@ def send_text(message):
             bot.send_message(386410157, str(users_id[end_block:len(users_id)]))
             ###
 
-        bot.send_message(386410157, 'Добавлен новый пользователь!\n Всего пользователей: ' + str(len(users_id)))
+        bot.send_message(386410157, 'Добавлен новый пользователь!\nВсего пользователей: ' + str(len(users_id)))
 
     if message.text == 'В главное меню':
 
