@@ -1,6 +1,7 @@
-my_id = 386410157
+# -*- coding: utf8 -*-
+import telebot
 
-len(users_id) = 1201
-
-if len(users_id) % 300 == 0:
-    print('yes')
+bot = telebot.TeleBot('1495506119:AAF_ZyrAlBSU4_9anJKHLVMBukjB2YAzC50')
+@bot.message_handler(commands=['start'])
+def start(message):
+    bot.send_message(message.chat.id, 'привет привет ')
